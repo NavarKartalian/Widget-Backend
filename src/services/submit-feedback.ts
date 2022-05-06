@@ -40,9 +40,7 @@ export class SubmitFeedback {
         `<div style="font-family: sans-serif; font-size: 16px; color: #111">`,
         `<p>Tipo: ${type}</p>`,
         `<p>Comentário: ${comment}</p>`,
-        screenshot === "data:image/png;base64,null"
-          ? ""
-          : `<img src="${screenshot}" />`,
+        !screenshot ? null : `<img src="${screenshot}" />`,
         `</div>`,
       ].join('\n')
     })
